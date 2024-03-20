@@ -1,5 +1,5 @@
 :root {
-  --primary: #b6895b;
+  --primary: #ffa500;
   --bg: #010101;
 }
 
@@ -295,46 +295,24 @@ body {
 
 /* galery Section */
 
-* {
-  box-sizing: border-box;
-}
-.container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-}
-.container__items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100vh;
-}
-.polaroid {
-  margin: 30px;
-  width: 400px;
-  height: 450px;
-  background-color: white;
-  padding: 1rem;
-  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
-}
-.polaroid__content-image {
-  height: 350px;
-  width: 100%;
+.card-img {
+  background-color: #010101;
   overflow: hidden;
+  margin-top: 4rem;
 }
-.polaroid__content-image > img {
-  height: 100%;
-  width: 100%;
-  display: block;
+
+img {
+  width: 300px;
   object-fit: cover;
+  transition: all 0.2s ease-in-out;
 }
-.polaroid__content-caption {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  color: #010101;
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.card-img img {
+  border-radius: 10%;
 }
 
 /* Contact Section */
@@ -588,12 +566,10 @@ footer .credit a {
     flex-wrap: wrap;
   }
 
-  .container .row {
-    display: flex;
-  }
-
-  .polaroid {
-    display: flex;
+  .card-img {
+    object-position: center;
+    object-fit: cover;
+    margin-left: 12rem;
   }
 }
 
